@@ -146,9 +146,8 @@
 .article h3 { margin-top: 2.25rem; font-size: 1.3rem; font-weight: 600; color: var(--strong); }
 .article a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
 .article ul,
-.article ol { padding-left: 1.4rem; }
 .article ul { list-style: disc; }
-.article li + li { margin-top: 0.5rem; }
+.article ul li + li { margin-top: 0.5rem; }
 .article blockquote {
 	padding: 1.25rem 1.5rem;
 	border-left: 3px solid var(--accent);
@@ -163,12 +162,6 @@
 .article pre code { padding: 0; background: none; }
 .article figure { margin: 2.5rem 0 0; }
 .article figcaption { margin-top: 0.75rem; font-size: 0.85rem; text-align: center; color: var(--muted-foreground); }
-.article figure img,
-.cover-photo {
-	width: 100%;
-	height: auto;
-	border-radius: 1rem;
-}
 
 .article-footer {
 	margin: 0 auto;
@@ -243,4 +236,45 @@
 
 @media (min-width: 1024px) {
 	.post-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Cover image keeps its natural shape */
+.article figure img {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
+
+/* Numbered steps with purple circles */
+.article ol {
+	list-style: none;
+	counter-reset: step-counter;
+	padding-left: 0;
+	margin: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+.article ol li {
+	counter-increment: step-counter;
+	display: flex;
+	align-items: flex-start;
+	gap: 1.25rem;
+	line-height: 1.7;
+}
+.article ol li::before {
+	content: counter(step-counter);
+	flex-shrink: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 50%;
+	background: linear-gradient(135deg, oklch(0.34 0.15 295), oklch(0.48 0.22 305));
+	color: var(--strong-foreground);
+	font-weight: 700;
+	font-size: 0.95rem;
+	margin-top: 0.15rem;
+	box-shadow: 0 4px 12px color-mix(in oklch, oklch(0.48 0.22 305) 25%, transparent);
 }
