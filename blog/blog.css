@@ -163,6 +163,12 @@
 .article pre code { padding: 0; background: none; }
 .article figure { margin: 2.5rem 0 0; }
 .article figcaption { margin-top: 0.75rem; font-size: 0.85rem; text-align: center; color: var(--muted-foreground); }
+.article figure img,
+.cover-photo {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
 
 .article-footer {
 	margin: 0 auto;
