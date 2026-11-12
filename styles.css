@@ -253,6 +253,9 @@ ul { padding: 0; list-style: none; }
 	.hero { padding-left: 2.5rem; padding-right: 2.5rem; }
 	.nav-logo { height: 3.5rem; }
 	.nav-links { display: flex; }
+	.nav-toggle { display: none; }
+	.nav-links { position: static; flex-direction: row; align-items: center; gap: 2rem; padding: 0; border-radius: 0; background: none; box-shadow: none; }
+	.nav-link-blog { display: block; }
 	.hero-grid { grid-template-columns: 1.05fr 0.95fr; padding-top: 2rem; margin-top: 0; }
 	.hero-art { justify-self: end; }
 	.content-section { padding: 9rem 2.5rem; } 
