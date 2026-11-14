@@ -1,5 +1,5 @@
 :root {
-  --background: oklch(0.975 0.004 260);
+	--background: oklch(0.975 0.004 260);
 	--foreground: oklch(0.25 0.025 270);
 	--muted-foreground: oklch(0.52 0.025 265);
 	--primary: oklch(0.7 0.14 190);
@@ -51,7 +51,7 @@ ul { padding: 0; list-style: none; }
 	background: linear-gradient(135deg, oklch(0.25 0.09 250), oklch(0.34 0.16 305));
 }
 .hero::after {
-  content: "";
+	content: "";
 	position: absolute;
 	inset: auto 0 0;
 	height: 1px;
